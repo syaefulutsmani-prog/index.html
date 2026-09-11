@@ -1,1 +1,40 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undangan Pernikahan Ustadz Ikbal & Rina</title>
+    
+    <!-- Pengaturan Thumbnail WhatsApp/Sosmed -->
+    <meta property="og:title" content="Undangan Pernikahan Ustadz Ikbal & Rina">
+    <meta property="og:description" content="Tanpa mengurangi rasa hormat, kami mengundang Bapak/Ibu/Saudara/i untuk hadir di acara kami.">
+    <meta property="og:image" content="https://files.catbox.moe/veaoy9.jpg">
+    <meta property="og:type" content="website">
 
+    <style>
+        html, body { 
+            margin: 0; 
+            padding: 0; 
+            width: 100%; 
+            height: 100%; 
+            overflow: hidden; 
+            background: #000; 
+        }
+        iframe { 
+            width: 100%; 
+            height: 100%; 
+            border: none; 
+            display: block; 
+        }
+    </style>
+</head>
+<body>
+    <iframe id="undanganFrame" allowfullscreen></iframe>
+    
+    <script>
+        const baseUrl = "https://script.google.com/macros/s/AKfycbzZntQ6X5aHKbNDeUnXw9_P5e8zEItNa9O0ZdQdvDshKIQWXnzEPpj0Y1k2KzxqjaGniw/exec";
+        const queryString = window.location.search;
+        document.getElementById('undanganFrame').src = baseUrl + queryString;
+    </script>
+</body>
+</html>
