@@ -5,6 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Undangan Pernikahan Ikbal & Rina</title>
   
+  <!-- Pengaturan Thumbnail WhatsApp/Sosmed -->
+  <meta property="og:title" content="Undangan Pernikahan Ikbal & Rina">
+  <meta property="og:description" content="Ahad, 20 September 2026. Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir.">
+  <meta property="og:image" content="https://syaefulutsmani-prog.github.io/UNDANGAN-IKBAL-DAN-RINA/thumbnail.jpg">
+  <meta property="og:type" content="website">
+
   <style>
     body {
       margin: 0;
@@ -116,10 +122,13 @@
     <a href="#" class="btn" onclick="alert('Terima kasih telah membuka undangan kami!'); return false;">BUKA UNDANGAN</a>
   </div>
 
+  <!-- SCRIPT OTOMATIS MENANGKAP NAMA DARI LINK -->
   <script>
     const urlParams = new URLSearchParams(window.location.search);
     const namaTamu = urlParams.get('kepada');
+    
     if (namaTamu) {
+      // Mengganti teks 'Tamu Undangan' dengan nama dari link serta mengubah tanda + menjadi spasi
       document.getElementById('nama-tamu').innerText = namaTamu.replace(/\+/g, ' ');
     }
   </script>
