@@ -1,137 +1,40 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Undangan Pernikahan Ikbal & Rina</title>
-  
-  <!-- Pengaturan Thumbnail WhatsApp/Sosmed -->
-  <meta property="og:title" content="Undangan Pernikahan Ikbal & Rina">
-  <meta property="og:description" content="Ahad, 20 September 2026. Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir.">
-  <meta property="og:image" content="https://syaefulutsmani-prog.github.io/UNDANGAN-IKBAL-DAN-RINA/thumbnail.jpg">
-  <meta property="og:type" content="website">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undangan Pernikahan Ustadz Ikbal & Rina</title>
+    
+    <!-- Pengaturan Thumbnail WhatsApp/Sosmed -->
+    <meta property="og:title" content="Undangan Pernikahan Ustadz Ikbal & Rina">
+    <meta property="og:description" content="Tanpa mengurangi rasa hormat, kami mengundang Bapak/Ibu/Saudara/i untuk hadir di acara kami.">
+    <meta property="og:image" content="https://files.catbox.moe/veaoy9.jpg">
+    <meta property="og:type" content="website">
 
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background-color: #1a1a1a;
-      font-family: 'Times New Roman', serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-    }
-    .card {
-      width: 100%;
-      max-width: 480px;
-      background: linear-gradient(135deg, #2b261f 0%, #151310 100%);
-      color: #f3e9dc;
-      padding: 30px 20px;
-      box-sizing: border-box;
-      text-align: center;
-      border: 2px solid #d4af37;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.8);
-    }
-    .bismillah {
-      font-size: 24px;
-      color: #d4af37;
-      margin-bottom: 15px;
-    }
-    .title {
-      font-size: 14px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: #c5a059;
-      margin-bottom: 20px;
-    }
-    .names {
-      font-size: 45px;
-      font-style: italic;
-      color: #f9f4ef;
-      margin: 10px 0;
-      line-height: 1.2;
-    }
-    .ampersand {
-      font-size: 30px;
-      color: #d4af37;
-      margin: 0;
-    }
-    .date-box {
-      margin: 30px 0;
-      border-top: 1px solid #d4af37;
-      border-bottom: 1px solid #d4af37;
-      padding: 12px 0;
-      font-size: 16px;
-      letter-spacing: 1px;
-      color: #d4af37;
-    }
-    .guest-section {
-      background: rgba(212, 175, 55, 0.1);
-      border: 1px dashed #d4af37;
-      padding: 15px;
-      margin: 25px 0;
-      border-radius: 4px;
-    }
-    .guest-label {
-      font-size: 12px;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      color: #b59a6c;
-      margin-bottom: 5px;
-    }
-    .guest-name {
-      font-size: 20px;
-      font-weight: bold;
-      color: #ffffff;
-      word-break: break-word;
-    }
-    .btn {
-      display: inline-block;
-      background: linear-gradient(135deg, #d4af37 0%, #aa8c2c 100%);
-      color: #151310;
-      padding: 12px 30px;
-      text-decoration: none;
-      font-weight: bold;
-      letter-spacing: 1px;
-      border-radius: 30px;
-      box-shadow: 0 4px 15px rgba(212,175,55,0.3);
-      margin-top: 10px;
-    }
-  </style>
+    <style>
+        html, body { 
+            margin: 0; 
+            padding: 0; 
+            width: 100%; 
+            height: 100%; 
+            overflow: hidden; 
+            background: #000; 
+        }
+        iframe { 
+            width: 100%; 
+            height: 100%; 
+            border: none; 
+            display: block; 
+        }
+    </style>
 </head>
 <body>
-
-  <div class="card">
-    <div class="bismillah">﷽</div>
-    <div class="title">Undangan Pernikahan</div>
+    <iframe id="undanganFrame" allowfullscreen></iframe>
     
-    <div class="names">Ikbal</div>
-    <div class="ampersand">&</div>
-    <div class="names">Rina</div>
-
-    <div class="date-box">
-      AHAD - 20 SEPTEMBER 2026
-    </div>
-
-    <div class="guest-section">
-      <div class="guest-label">Kepada Yth.</div>
-      <div class="guest-name" id="nama-tamu">Tamu Undangan</div>
-    </div>
-
-    <a href="#" class="btn" onclick="alert('Terima kasih telah membuka undangan kami!'); return false;">BUKA UNDANGAN</a>
-  </div>
-
-  <!-- SCRIPT OTOMATIS MENANGKAP NAMA DARI LINK -->
-  <script>
-    const urlParams = new URLSearchParams(window.location.search);
-    const namaTamu = urlParams.get('kepada');
-    
-    if (namaTamu) {
-      // Mengganti teks 'Tamu Undangan' dengan nama dari link serta mengubah tanda + menjadi spasi
-      document.getElementById('nama-tamu').innerText = namaTamu.replace(/\+/g, ' ');
-    }
-  </script>
-
+    <script>
+        const baseUrl = "https://script.google.com/macros/s/AKfycbzZntQ6X5aHKbNDeUnXw9_P5e8zEItNa9O0ZdQdvDshKIQWXnzEPpj0Y1k2KzxqjaGniw/exec";
+        const queryString = window.location.search;
+        document.getElementById('undanganFrame').src = baseUrl + queryString;
+    </script>
 </body>
 </html>
